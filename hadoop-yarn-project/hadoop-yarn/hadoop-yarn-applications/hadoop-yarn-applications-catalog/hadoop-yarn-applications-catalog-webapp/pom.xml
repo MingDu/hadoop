@@ -37,6 +37,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <dependency.locations.enabled>false</dependency.locations.enabled>
         <javascript.test>*Spec</javascript.test>
+        <node.download.root>https://registry.npmmirror.com/nodejs</node.download.root>
+        <npm.download.root>http://registry.npmjs.org/npm</npm.download.root>
+        <yarn.download.root>https://mirrors.huaweicloud.com/yarn/</yarn.download.root>
     </properties>
 
     <dependencies>
@@ -267,6 +270,9 @@
                 <artifactId>frontend-maven-plugin</artifactId>
                 <configuration>
                     <workingDirectory>target</workingDirectory>
+                    <nodeDownloadRoot>${node.download.root}</nodeDownloadRoot>
+                    <yarnDownloadRoot>${yarn.download.root}</yarnDownloadRoot>
+                    <npmDownloadRoot>${npm.download.root}</npmDownloadRoot>
                 </configuration>
                 <executions>
                     <execution>
